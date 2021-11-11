@@ -2,20 +2,20 @@
 #! /bin/bash
 
 
-echo  "Comandi server:\n"
-echo  "\t1->XAMPP" 
-echo  "\t2->StartALL"
-echo  "\t3->StopALL"
+echo  "Server Command:\n"
+echo  "\t 1->Start&Run" 
+echo  "\t 2->Start MySqlServer"
+echo  "\t 3->Stop MySqlServer"
+echo  "Execute #:"
 read CMD
-
 case $CMD in
-  1)	sudo /opt/lampp/manager-linux-x64.run
+  1)	sudo /opt/lampp/lampp startmysql && sudo /opt/lampp/manager-linux-x64.run 
 ;;
 
-  2)	sudo /opt/lampp/lampp start
+  2)	sudo /opt/lampp/lampp startmysql
 ;;
 
-  3)	sudo /opt/lampp/lampp stop	
+  3)	sudo /opt/lampp/lampp stopmysql	
 ;;
 
 *)
