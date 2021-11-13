@@ -9,7 +9,7 @@ tput sgr0
 
 tput setaf 3
 tput cup 2 22
-echo "by Lorenzo Siena"
+echo "   by Lorenzo Siena"
 tput sgr0
 
 tput cup 4 0
@@ -36,17 +36,7 @@ function do_for_sigint() {
 init
 # clear the screen
 tput clear
-
-# Move cursor to screen location X,Y (top left is 0,0)
-tput cup 3 15
- 
-# Set a foreground colour using ANSI escape
-tput setaf 3
-echo "by Lorenzo Siena"
-tput sgr0
- 
 tput cup 5 17
-# Set reverse video mode
 tput rev
 tput setaf 2
 echo " S E R V E R - I N O "
@@ -78,9 +68,7 @@ case $CMD in
   	sleep 1s
   	tput cup 15 15
   	echo "Demon activated"
-        
         sleep 2s
-
 	tput clear
 	tput sgr0
 	tput rc
@@ -92,7 +80,6 @@ case $CMD in
 	tput cup 15 15
 	echo "Demon deactivated"
         sleep 2s
-
 	tput clear
 	tput sgr0
 	tput rc
