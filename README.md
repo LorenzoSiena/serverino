@@ -1,3 +1,3 @@
 # Serverino
 
-A simple bash script for Starting MySql XAMPP services.
+A simple bash script with GUI for starting MySql XAMPP services.
