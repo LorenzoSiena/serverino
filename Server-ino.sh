@@ -115,7 +115,7 @@ case $CMD in
   *)
  	tput cup 15 15
  	tput setab 1
- 	echo “Comando non valido”
+ 	echo “Invalid command ”
  	sleep 1.5s
 	tput clear
 	tput sgr0
