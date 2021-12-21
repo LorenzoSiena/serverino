@@ -32,7 +32,7 @@ function Shut_down() {
   exit 0
 } 
 #Init Sudo Permission
-init DEBUG
+init
 # clear the screen
 tput clear
 
