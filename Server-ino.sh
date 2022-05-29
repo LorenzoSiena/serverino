@@ -78,12 +78,12 @@ tput setaf 7
 read -p "Select a command [1-4] " CMD
 trap Shut_down 2
 case $CMD in
-  1)	sudo /opt/lampp/lampp startmysql && sudo /opt/lampp/manager-linux-x64.run
+  1)	sudo /opt/lampp/lampp startmysql && sudo /opt/lampp/lampp startapache && sudo /opt/lampp/manager-linux-x64.run
   	;;
-  2)	sudo /opt/lampp/lampp startmysql
+  2)	sudo /opt/lampp/lampp startmysql && sudo /opt/lampp/lampp startapache
   	sleep 1s
   	tput cup 15 15
-  	echo "Demon deactivated"
+  	echo "Demone attivato"
         
         sleep 2s
 
@@ -93,10 +93,10 @@ case $CMD in
 	clear
         exit 0
 	;;
-  3)	sudo /opt/lampp/lampp stopmysql	
+  3)	sudo /opt/lampp/lampp stopmysql	&& sudo /opt/lampp/lampp stopapache
 	sleep 1s
 	tput cup 15 15
-	echo "Demon deactivated"
+	echo "Demone disattivato"
         sleep 2s
 
 	tput clear
